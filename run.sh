@@ -18,6 +18,9 @@ S3PATH="s3://$BUCKET/$BACKUP_FOLDER"
 # Export AWS Credentials into env file for cron job
 printenv | sed 's/^\([a-zA-Z0-9_]*\)=\(.*\)$/export \1="\2"/g' | grep -E "^export AWS" > /root/project_env.sh
 
+aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+
 echo "=> Creating backup script"
 rm -f /backup.sh
 cat <<EOF >> /backup.sh
