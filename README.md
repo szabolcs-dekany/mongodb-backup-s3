@@ -16,7 +16,7 @@ docker run -d \
   halvves/mongodb-backup-s3
 ```
 
-If you link `szabolcs-dekany/mongodb-backup-s3` to a mongodb container with an alias named mongodb, this image will try to auto load the `host`, `port`, `user`, `pass` if possible. Like this:
+If you link `szabolcsdekany/mongodb-backup-s3` to a mongodb container with an alias named mongodb, this image will try to auto load the `host`, `port`, `user`, `pass` if possible. Like this:
 
 ```
 docker run -d \
